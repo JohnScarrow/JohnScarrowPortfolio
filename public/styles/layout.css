@@ -25,11 +25,14 @@ header{
 
 }
 .main {
-  margin-top: 220px;
+  margin-top: 0px;
 }
 .tab {
   list-style: none;
 }
+.devicemenu{
+    display:none;
+  }
 @media only screen and (min-width: 600px){
   header{
     height: 120px;
@@ -37,7 +40,14 @@ header{
   .tab{
     display: inline;
     }
-    .main{
-      margin-top: 140px;
+  .main{
+    margin-top: 0px;
     }
+  .hamburger{
+    display: none;
+  }
+  .devicemenu{
+    display:inline-block;
+    font-size: 20px;
+  }
   }
