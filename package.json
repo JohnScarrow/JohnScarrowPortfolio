@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "John Scarrow Portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "node.js": "^0.0.0",
+    "body-parser": "^1.17.2",
+    "fs": "0.0.1-security",
+    "pg": "^6.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnScarrow/JohnScarrowPortfolio.git"
+  },
+  "author": "John Scarrow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnScarrow/portfolio/issues"
+  },
+  "homepage": "https://github.com/JohnScarrow/portfolio#readme"
+}
