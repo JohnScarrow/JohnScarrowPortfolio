@@ -1,51 +1,41 @@
 'use strict';
 var app = app || {};
+var projectData = projectData || [];
+var projects = app.projects || [];
 
 (function (module) {
-  var projects = [];
-  var projectData = projectData || [];
-  $('.cross').hide();
-  $('.menu').hide();
-  $('.hamburger').click(function () {
-    $('.menu').slideToggle('slow', function () {
-      $('.hamburger').hide();
-      $('.cross').show();
+  const hamburger = function (){
+    console.log('hamburger works');
+    $('.cross').hide();
+    $('.menu').hide();
+    $('.hamburger').click(function () {
+      $('.menu').slideToggle('slow', function (e) {
+        e.preventdefault();
+        $('.hamburger').hide();
+        $('.cross').show();
+      });
     });
-  });
 
-  $('.cross').click(function () {
-    $('.menu').slideToggle('slow', function () {
-      $('.cross').hide();
-      $('.hamburger').show();
+    $('.cross').click(function () {
+      $('.menu').slideToggle('slow', function (e) {
+        e.preventdefault();
+        $('.cross').hide();
+        $('.hamburger').show();
+      });
     });
-  });
-
-  function Project(projectsObj) {
-    this.title = projectsObj.title;
-    this.link = projectsObj.link;
-    this.description = projectsObj.description;
-  }
-  var sortProjects = function () {
-    Project.prototype.toHtml = function () {
-      var template = Handlebars.compile($('#project-template').text());
-      return template(this);
-    };
-    projectData.sort(function (a, b) {
-      return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-    });
-    projectData.forEach(function (projectObject) {
-      projects.push(new Project(projectObject));
-    });
-    projects.forEach(function (project) {
-      $('#project').append(project.toHtml())
-    });
-  };
-  var headerNav = function () {
-    $('#tabs').on('click', '.tab', function () {
+    $('#tabs').on('click', '.tab', function (e) {
+      e.preventdefault();
       $('.tab-content').hide();
       $('#' + $(this).data('content')).fadeIn();
     });
   };
-  app.sortProjects = sortProjects;
-  headerNav();
+  const appendProjects = function () {
+    projects.forEach(function (project) {
+      console.log(project);
+      $('#project').append(project.toHtml())
+    });
+  };
+  
+  module.hamburger = hamburger;
+  module.appendProjects = appendProjects;
 }(app));

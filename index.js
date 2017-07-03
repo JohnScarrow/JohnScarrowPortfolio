@@ -30,7 +30,7 @@ app.post('/email', function(req, res) {
 
 app.get('/github/*', proxyGithub);
 
-app.get('*', (request, response) => response.sendFile('index.html', {root: './'}));
+app.get('*', (request, response) => response.sendFile('index.html', {root: './public/'}));
 
 
 app.listen(PORT, () => console.log('LocalHost: ' + PORT));
