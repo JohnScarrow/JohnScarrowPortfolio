@@ -1,1 +1,12 @@
-[{"title":"Bus Mall","link":"github.io","description":"<p>this is the shizz</p>"},{"title":"Bus Mall","link":"github.io","description":"<p>this is the shizz</p>"},{"title":"Bus Mall","link":"github.io","description":"<p>this is the shizz</p>"}]
+[{"title":"Playlist For Me",
+"link":"http://playlistfor.me",
+"description":"<p>301 Final project that uses api's to create a playlist around the artist you enter</p>",
+"img":"assets/playlist-for-me.png"},
+{"title":"Gamers Connect",
+"link":"github.io",
+"description":"<p>A pilot app for connecting Gamers into a community to connect them with other people that play at the same time they do</p>",
+"img":"assets/gamers-connect.png"},
+{"title":"Bus Mall",
+"link":"github.io",
+"description":"<p>A servey app that shows popular products</p>",
+"img":"assets/bus-mall.png"}]

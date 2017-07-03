@@ -27,6 +27,7 @@ var projects = app.projects || [];
   };
   var sortProjects = function () {
     function Project(projectsObj) {
+      this.img = projectsObj.img;
       this.title = projectsObj.title;
       this.link = projectsObj.link;
       this.description = projectsObj.description;
