@@ -4,12 +4,16 @@ var app = app || {};
 (function(module){
   const initpage = function(){
     // app.sortProjects();
-    app.hamburger();
-    app.fetchjson();
+    $(`.tab-content`).hide();
+    $(`.tab-content`).fadeIn();
   };
-  const tests = function(){
-    console.log('test Complete');
-  };
-  app.initpage = initpage;
-  app.tests = tests;
+
+  const aboutPageInit = function() {
+
+    $(`.tab-content`).hide();
+    $(`#about`).fadeIn();
+
+  }
+  module.aboutPageInit = aboutPageInit;
+  module.initpage = initpage;
 }(app));

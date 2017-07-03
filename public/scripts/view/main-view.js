@@ -4,13 +4,12 @@ var projectData = projectData || [];
 var projects = app.projects || [];
 
 (function (module) {
-  const hamburger = function (){
-    console.log('hamburger works');
+  // const hamburger = function (){
     $('.cross').hide();
     $('.menu').hide();
     $('.hamburger').click(function () {
       $('.menu').slideToggle('slow', function (e) {
-        e.preventdefault();
+        // e.preventdefault();
         $('.hamburger').hide();
         $('.cross').show();
       });
@@ -18,7 +17,7 @@ var projects = app.projects || [];
 
     $('.cross').click(function () {
       $('.menu').slideToggle('slow', function (e) {
-        e.preventdefault();
+        // e.preventdefault();
         $('.cross').hide();
         $('.hamburger').show();
       });
@@ -28,14 +27,14 @@ var projects = app.projects || [];
       $('.tab-content').hide();
       $('#' + $(this).data('content')).fadeIn();
     });
-  };
+  // };
   const appendProjects = function () {
     projects.forEach(function (project) {
       console.log(project);
       $('#project').append(project.toHtml())
     });
   };
-  
-  module.hamburger = hamburger;
+  // hamburger();
+  app.fetchjson();
   module.appendProjects = appendProjects;
 }(app));

@@ -1,6 +1,6 @@
 'use strict';
 var app = app || {};
-page('/tests', app.tests);
+page('/about', app.aboutPageInit);
 page('/', app.initpage);
 
 page();
