@@ -1,2 +1,2 @@
 # JohnScarrowPortfolio
-Showing of my work
+Showing off my work
